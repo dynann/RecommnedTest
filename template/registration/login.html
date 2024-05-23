@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{%block title %} Login {% endblock title %}
+{% block content %} 
+<div style="font-family: Poppins; color: rgb(0, 0, 0);">
+    <div class="form-container">
+    <h1 style="font-family: Poppins; font-weight: bold; color: rgb(0, 0, 0); font-size: 30px;"> Log In </h1>
+      <form method="post"> 
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div style="text-align: center; margin: auto;">
+          <button class="btn btn-success ml-2" style="font-family: Poppins; font-weight: bold; color: rgb(0, 0, 0);
+        ">Log in</button>
+        </div>
+        
+      </form>
+      <div style="font-family: Poppins; font-weight: normal; color: rgb(0, 0, 0); margin-top: 10px;">
+        <p> forgot your password <a href="{% url 'password_reset' %}" style="text-decoration: none;">reset password</a>
+        </p>
+      </div>
+    </div>  
+    
+  </div>  
+{% endblock content %}
