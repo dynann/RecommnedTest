@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     #local
     'accounts.apps.AccountsConfig',
+    'recommend.apps.RecommendConfig',
     
     #third party
     'crispy_forms',

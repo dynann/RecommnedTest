@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block content %}
+<section>
+    <div class="container d-flex justify-content-center flex-column align-items-center">
+        <h1>SURVEYS</h1>
+        <form method="post" action="{% url 'preference' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <button type="submit" name="preference" value="Physical" class="btn btn-primary">Physical</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="preference" value="Video" class="btn btn-primary">Video</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="preference" value="Read/Write/Practice Exercise" class="btn btn-primary">Read/Write/Practice Exercise</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="preference" value="Project-based Learning" class="btn btn-primary">Project-based Learning</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock content %}
